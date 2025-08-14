@@ -45,20 +45,13 @@ class _InternalSliderAppBar extends BaseSliderAppBar
   @override
   Widget build(BuildContext context) {
     List<Widget> items = [
-      _LeadingIcon(
-        onTap: onDrawerTap,
-        animationController: animationController,
-        config: config,
-      ),
-      Expanded(child: config.title),
-      config.trailing ?? SizedBox(width: 35)
     ];
 
     if (slideDirection == SlideDirection.rightToLeft) {
       items = items.reversed.toList();
     }
     return Container(
-      height: kToolbarHeight,
+      height: 0,
       padding: config.padding,
       color: config.backgroundColor ?? Color(0xFFFFFFFF),
       child: Row(children: items),

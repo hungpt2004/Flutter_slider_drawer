@@ -27,17 +27,6 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: SliderDrawer(
         key: _sliderDrawerKey,
-        appBar: SliderAppBar(
-          config: SliderAppBarConfig(
-              title: Text(
-            title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w700,
-            ),
-          )),
-        ),
         sliderOpenSize: 179,
         slider: SliderMenu(
           onItemClick: (title) {
